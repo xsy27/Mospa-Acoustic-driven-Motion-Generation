@@ -1,0 +1,49 @@
+{
+    "arch": {
+        "decoder": "trans_enc",
+        "latent_dim": 512,
+        "ff_size": 1024,
+        "num_heads": 8,
+        "num_layers": 4
+    },
+    "dataset": {
+        "dataset_name": "SAM",
+        "binaural": true,
+        "pose_vec": "complex",
+        "clip_len": 240,
+        "move": 120,
+        "rot_rep": "6d",
+        "njoints": 25,
+        "nfeats": 6,
+        "cond": "audio",
+        "smpl_dir": "smpl_models/smplx"
+    },
+    "diff": {
+        "noise_schedule": "cosine",
+        "diffusion_steps": 1000,
+        "sigma_small": true
+    },
+    "trainer": {
+        "epoch": 500,
+        "lr": 1e-4,
+        "batch_size": 512,
+        "cond_mask_prob": 0.1,
+        "mask_sound_source": false,
+        "mask_genre": false,
+        "loss_terms": "11111",
+        "workers": 8
+    },
+    "ssl_arch": {
+        "ch": 4,
+        "audio_dim": 512,
+        "rotation": false,
+        "rot_dim": 4,
+        "latent_dim": 256,
+        "conv_kernel": 3,
+        "conv_pad": 1,
+        "mp_stride": 4,
+        "mp_pad": 1,
+        "num_layers": 1,
+        "mode": "concat"
+    }
+}

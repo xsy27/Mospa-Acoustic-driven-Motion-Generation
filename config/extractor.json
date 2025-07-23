@@ -1,0 +1,25 @@
+{
+    "arch": {
+        "hidden_size": 1024,
+        "num_layers": 4,
+        "margin": 10
+    },
+    "dataset": {
+        "dataset_name": "SAM",
+        "binaural": true,
+        "pose_vec": "complex",
+        "clip_len": 240,
+        "move": 120,
+        "rot_rep": "6d",
+        "njoints": 25,
+        "nfeats": 6,
+        "cond": "audio",
+        "smpl_dir": "smpl_models/smplx"
+    },
+    "trainer": {
+        "epoch": 2000,
+        "lr": 5e-5,
+        "batch_size": 64,
+        "workers": 8
+    }
+}
