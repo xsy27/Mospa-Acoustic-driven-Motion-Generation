@@ -37,7 +37,7 @@ python -W ignore -m main.evaluate --ckpt ./save/mospa/weights_6000.pt --save_pre
 The visualized outputs are store in `./eval/mospa`
 
 ### 4. Check the training process
-The checkpoints and the training process are store in save/ssl and save/mospa_afm_train.
+The checkpoints and the training process are store in `./save/ssl` and `./save/mospa_afm_train`.
 Run
 ```shell
 tensorboard --logdir=./save/mospa
