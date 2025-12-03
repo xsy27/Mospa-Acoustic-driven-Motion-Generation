@@ -1,5 +1,5 @@
 # MOSPA: Human Motion Generation Driven by Spatial Audio (NeurIPS 2025)
-[[Paper]](https://arxiv.org/abs/2507.11949) [[Dataset]](https://huggingface.co/datasets/JimSYXu/SAM)
+[[Paper]](https://arxiv.org/abs/2507.11949) [[Dataset]](https://huggingface.co/datasets/JimSYXu/SAM) [[Hugging Face]](https://huggingface.co/JimSYXu/MOSPA)
 
 ![teaser_image](<images/teaser.png>)
 
@@ -31,6 +31,10 @@ Download the SMPL-X body models and unzip them into the repository root. The fin
         |- smplx
     ...
 ```
+
+### Pretrained model
+
+Download the pretrained model from [MOSPA](https://huggingface.co/JimSYXu/MOSPA) or train your own model.
 
 ## Training
 
