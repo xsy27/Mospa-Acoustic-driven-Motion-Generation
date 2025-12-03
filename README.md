@@ -1,4 +1,7 @@
-# MOSPA
+# MOSPA: Human Motion Generation Driven by Spatial Audio (NeurIPS 2025)
+[[Paper]](https://arxiv.org/abs/2507.11949) [[Dataset]](https://huggingface.co/datasets/JimSYXu/SAM)
+
+![teaser_image](<images/teaser.png>)
 
 ## Abstract
 
@@ -13,6 +16,20 @@ git clone https://github.com/xsy27/MOSPA.git
 cd MOSPA
 conda env create -f environment.yml
 conda activate mospa
+```
+
+### 2. Dataset
+Download the [SAM](https://huggingface.co/datasets/JimSYXu/SAM) dataset, keeping the original folder hierarchy.
+
+### 3. SMPL model
+
+Download the SMPL-X body models and unzip them into the repository root. The final layout should resemble
+```text
+|-
+    ...
+    |- smpl_models
+        |- smplx
+    ...
 ```
 
 ## Training
@@ -35,7 +52,7 @@ python -W ignore -m main.evaluate --ckpt ./save/mospa/weights_6000.pt --save_pre
 The visualized outputs are store in `./eval/mospa`
 
 ### 4. Check the training process
-The checkpoints and the training process are store in save/ssl and save/mospa_afm_train.
+The checkpoints and the training process are store in `./save`
 Run
 ```shell
 tensorboard --logdir=./save/mospa
@@ -64,7 +81,7 @@ The results can be viewed at `metrics_v2.out`
 ## 1. Download Blender
 The version of blender used in this project is 2.93.
 You can download it from https://download.blender.org/release/Blender2.93/
-Move it to the MOSPA directory.
+Move it to the MOSPA directory and rename to `blender`.
 
 ## 2. Install python packages for Blender
 ```shell

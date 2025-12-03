@@ -31,7 +31,7 @@ def add_train_args(parser):
     parser.add_argument("--lr_anneal_steps", default=0, type=int, help="Number of steps to anneal the learning rate.")
     parser.add_argument('--weight_decay', default=0.00, type=float, help='Weight decay for the optimizer.')
     parser.add_argument('--batch_size', type=int, help='Batch size for training.')
-    parser.add_argument('--loss_terms', type=str, help='Loss terms to use in training. Format: [mse_rotation, positional_loss, velocity_loss, foot_contact]. Use 0 for No, 1 for Yes, e.g., "1111".')
+    parser.add_argument('--loss_terms', type=str, help='Loss terms to use in training.')
     parser.add_argument('--cond_mask_prob', type=float, help='Probability of masking conditioning.')
     parser.add_argument('--ema', default=False, type=bool, help='Use Exponential Moving Average (EMA) for model parameters.')
     parser.add_argument('--workers', type=int, help='Number of workers for data loading.')

@@ -306,7 +306,7 @@ class MotionTrainingPortal(BaseTrainingPortal):
                     pred_joint_xyz = pred_xyz_reshape[:, relevant_joints, :, :]  # [BatchSize, 4, 3, Frames]
 
                     # another foot contact loss
-                    # fc_mask = (pred_joint_xyz[:, :, 1:2, :].abs() <= 0.385).repeat(1, 1, 3, 1)[..., :-1]s
+                    # fc_mask = (pred_joint_xyz[:, :, 1:2, :].abs() <= 0.385).repeat(1, 1, 3, 1)[..., :-1]
 
                     pred_vel = pred_joint_xyz[:, :, :, 1:] - pred_joint_xyz[:, :, :, :-1]
                     pred_vel[~fc_mask] = 0

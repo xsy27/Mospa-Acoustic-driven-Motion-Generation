@@ -249,7 +249,6 @@ def extract_acoustic_feature(audio, sr, n_fft, hop_length, window):
         # motion synthesis
         mfcc, # 20
         mfcc_delta, # 20
-        # harmonic_melspe_db,
         chroma_cqt,
         chroma_stft,
         onset_env, # 1
